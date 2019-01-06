@@ -1,0 +1,67 @@
+html, body {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background: #7c4;
+}
+
+#content {
+    width: 80%;
+    margin: auto;
+    background: #fff;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+#title {
+    text-align: center;
+}
+
+#title h1 {
+    margin-top: 0;
+    padding-top: 1.5em;
+}
+
+#nav {
+    width: 80%;
+    position: fixed;
+    left: 50%;
+    margin-left: -40%; 
+    background: #fff;
+}
+
+#nav table {
+    /* width: 100%; */
+    margin: auto;
+}
+
+#nav td {
+    text-align: center;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+#nav td:hover {
+    font-style: italic;
+}
+
+#nav a {
+    text-decoration: none;
+    color: #000;
+    font-size: 1.5em;
+}
+
+#main h2 {
+    padding-top: 1.5em;
+}
+
+figcaption {
+    color: #888;
+}
+
+span.emphasis {
+    font-style: italic;
+    font-weight: bold;
+}

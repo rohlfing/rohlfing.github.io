@@ -1,0 +1,106 @@
+<html>
+ <head>
+  <title>Austin's Github Page</title>
+  <link rel="stylesheet" href="css/styles.css" />
+ </head>
+ <body>
+  <div id="content">
+   <a name="home" />
+   <div id="nav">
+    <table>
+     <tr>
+      <td><a href="#home">Home</a></td>
+      <td><a href="#fish">Artifishal Intellingence</a></td>
+      <td><a href="#turbo">[Coming Soon]</a></td>
+     </tr>
+    </table>
+   </div>
+   <div id="title">
+    <h1>Welcome!</h1>
+   </div>
+   <div id="main">
+    <a name="fish"></a>
+    <h2>Speaking Smart-Fish Circuit</h2>
+    <figure>
+     <a href="images/fish_circuit.svg">
+      <img src="images/fish_circuit.svg" />
+     </a>
+     <figcaption>[Click on schematic for full-screen image]</figcaption>
+    </figure>
+    <p>
+    Shown above is the circuit I used to integrate a  Big-Mouth Billy Bass
+    with an Amazon Echo Dot in such a way that the fish would turn its head to
+    acknowledge the user (as the ring of lights previously did) and move its
+    mouth to lip-sync with spoken words. See my video
+    <a href="https://www.youtube.com/watch?v=MzcQi6uH7PU">here</a>.
+    </p>
+    <p>
+    This is not an original project idea; there are multiple more examples on
+    YouTube (and Amazon recently released a talking-fish-shaped bluetooth
+    speaker compatible with its Alexa products. However, the only DIY
+    explanations and tutorials I could find online required some kind of
+    microcontroller and usually a motorcontroller. My solution, however,
+    uses only on a couple dozen simple electrical components, nearly all of
+    which (with the exception of the 3 BJT transistors) came from a lab kit
+    from a college itro-to-circuits class.
+    </p>
+    <p>
+    Below I will attempt to explain the function of various sections of the
+    circuit and some of the design considerations that went into them. First,
+    though, a disclaimer: I took two learn-about-circuits classes in college
+    several years ago. There are likely quite a few probelms with the circuit.
+    <span class="emphasis"> If you see something that could be improved or needs
+    to be fixed, please leave a note in the comments at the bottom. </span>
+    Thanks!
+    </p>
+    <p>
+    There are two switches in the schematic, and these correspond to the two
+    switches found on the Billy Bass: the push button is the red button on the
+    front and the spdt switch is the "On / Sensor" switch on the back of the
+    case. The push button is being used to short the audio output of the Echo,
+    as my repackaging of the microphone board in the fish voids any of the
+    acoustic separation between speaker and mic that Amazon designed in. In
+    short, sometimes it is necessary to forcibly mute the speaker to be heard
+    by the microphones.
+    The SPDT switch changes between modes. In the connection depicted on the
+    schematic, the lip-syncing portion of the circuit is only able to drive the
+    the mouth motor when the Echo's lights are lit. This means that Alexa's
+    words are mouthed by the fish, but music, news, and other pre-recorded
+    content is not. In the alternate connection, all sounds activate the
+    mouth-moving circuitry. This is what is shown in the YouTube video when
+    the fish is speaking words for an NPR reporter.
+    </p>
+    <p>
+    The speaker used is the one built into the rear case of the Billy Bass.
+    It is driven from the 3.5 port on the Echo, which are depicted as the ports
+    on the left of the schematic above (top port is left channel, lower is
+    ground). Because of this, the volume is lower than it would be from using
+    the Echo on its own. In my tests, volume 10 was moderately loud, and
+    anything below 6 is difficult to hear if there is any ambient noise. This
+    could potentially be fixed by adding an audio amplifier to the circuit, but
+    it is functional as-is and I was going for simplicity in this design.
+    </p>
+    <div id="disqus_thread"></div>
+    <script>
+    var disqus_config = function () {
+       this.page.url = 'rohlfing.github.io';
+       this.page.identifier = 'rohlfing-github';
+       };
+
+    (function() { // DON'T EDIT BELOW THIS LINE
+     var d = document, s = d.createElement('script');
+     s.src = 'https://rohlfing-github.disqus.com/embed.js';
+     s.setAttribute('data-timestamp', +new Date());
+     (d.head || d.body).appendChild(s);
+    })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    
+    <a name="turbo"</a>
+    <h2>More Projects Coming Soon...</h2>    
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+   </div>
+  </div>
+ </body>
+</html>
