@@ -57,6 +57,10 @@ body {
     padding-top: 1.5em;
 }
 
+img.full_width {
+    width: 100%;
+}
+
 figcaption {
     color: #888;
 }
